@@ -1,0 +1,37 @@
+<h1><%= @contact.name() %> Information</h1>
+
+<form action="/contacts/<%= @contact.id() %>/info" method="post">
+
+  <label for="area_code">Area Code</label><br>
+  <input type="text" name="area_code" placeholder="505" style="width:32px;"><br>
+
+  <label for="subscriber">Phone Number</label><br>
+  <input type="text" name="subscriber" placeholder="111-4444"><br>
+
+  <label for="type">Type</label><br>
+  <select name="type">
+    <option value="cell">Cell</option>
+    <option value="landline">Landline</option>
+  </select><br>
+
+  <label for="email">Email</label><br>
+  <input type="text" name="email" value=""><br>
+
+  <label for="mail_type">Type</label><br>
+  <input type="text" name="mail_type" placeholder="e.g. Gmail, Yahoo"><br>
+
+  <label for="street">Street Address</label><br>
+  <input type="text" name="street" value=""><br>
+
+  <label for="city">City</label><br>
+  <input type="text" name="city"><br>
+
+  <label for="state">State</label><br>
+  <input type="text" name="state"><br>
+
+  <label for="zip">Zip</label><br>
+  <input type="text" name="zip"><br>
+
+  <button type="submit" class="btn-success">Enter</button>
+
+</form>

@@ -1,0 +1,17 @@
+<h1>Contacts</h1>
+
+<form action="/contacts" method="post">
+
+  <input type="hidden" name="id" value="<% Contact.all().length() %>">
+
+  <label for="name">Name</label>
+  <input type="text" name="name">
+
+  <label for="job">Job Title</label>
+  <input type="text" name="job">
+
+  <label for="company">Company</label>
+  <input type="text" name="company">
+
+  <button type="submit">Click me</button>
+</form>

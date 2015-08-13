@@ -1,5 +1,6 @@
 require('rspec')
 require('contacts')
+require('pry')
 
 describe(Contact) do
 

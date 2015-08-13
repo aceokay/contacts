@@ -1,5 +1,6 @@
 require('rspec')
 require('phone')
+require('pry')
 
 describe(Phone) do
 

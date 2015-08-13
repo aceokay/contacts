@@ -1,5 +1,6 @@
 require('rspec')
 require('email')
+require('pry')
 
 describe(Email) do
 

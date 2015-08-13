@@ -1,0 +1,24 @@
+<h1><%= @contact.name %></h1>
+
+<h4><%= @contact.job_title %></h4>
+<h4><%= @contact.company %></h4>
+<br>
+
+<h5>Phone Numbers</h5>
+<% @contact.phone_numbers().each() do |phone| %>
+<h6><%= phone.type()%>: (<%= phone.area_code()%>)<%= phone.subscriber()%></h6>
+<% end %>
+
+<h5>Emails</h5>
+<% @contact.emails().each() do |email| %>
+<h6><%= email.type()%>: <%= email.email() %></h6>
+<% end %>
+
+<h5>Addresses</h5>
+<% @contact.addresses().each() do |address| %>
+<h6><%= address.street_address()%> <%= address.city() %> <%= address.state %> <%= address.zip()%></h6>
+<% end %>
+
+<p>
+  <a href="/contacts/<%= @contact.id() %>/info/new">Add New Contact Information</a>
+</p>
