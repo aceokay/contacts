@@ -21,6 +21,12 @@ class Phone
     @@numbers = []
   end
 
-  
+  define_method(:id) do
+    @id
+  end
+
+  define_singleton_method(:find) do |id|
+    @@numbers[id-1]
+  end
 
 end
