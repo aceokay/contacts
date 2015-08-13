@@ -74,8 +74,19 @@ describe(Contact) do
       test_contact2.save()
       test_contact3 = Contact.new({:name => "Mike Bunker", :job_title => "Senior Developer", :company => "Acme"})
       test_contact3.save()
-
       expect(test_contact2.id()).to(eq(2))
+    end
+  end
+
+  describe('.find') do
+    it('takes a given id and returns the Contact class item') do
+      test_contact = Contact.new({:name => "Austin Kincaid", :job_title => "Senior Developer", :company => "Acme"})
+      test_contact.save()
+      test_contact2 = Contact.new({:name => "Josue Valverde", :job_title => "Senior Developer", :company => "Acme"})
+      test_contact2.save()
+      test_contact3 = Contact.new({:name => "Mike Bunker", :job_title => "Senior Developer", :company => "Acme"})
+      test_contact3.save()
+      expect(Contact.find(test_contact3.id())).to(eq(test_contact3))
     end
   end
 end

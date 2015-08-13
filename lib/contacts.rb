@@ -28,4 +28,8 @@ class Contact
   define_singleton_method(:all) do
     @@contacts
   end
+
+  define_singleton_method(:find) do |id|
+    @@contacts[id - 1]
+  end
 end
